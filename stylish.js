@@ -64,7 +64,11 @@ module.exports = {
 			ret += '  ' + logSymbols.success + ' No problems';
 			ret = '\n' + ret.trim();
 		}
-
-		console.log(ret + '\n');
+		
+		if (options.isReturn) {
+			return ret;
+		} else {
+			console.log(ret + '\n');
+		}
 	}
 };
